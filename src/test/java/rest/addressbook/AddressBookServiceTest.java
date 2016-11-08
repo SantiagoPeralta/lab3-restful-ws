@@ -48,7 +48,7 @@ public class AddressBookServiceTest {
 		// Verify that GET /contacts is well implemented by the service, i.e
 		// test that it is safe and idempotent
 		//////////////////////////////////////////////////////////////////////
-		// Se realiza la segunda comprovacion de que todo esta OK
+		// Se realiza la segunda comprobacion de que es idempotete
 		Response responseComprobacion = client.target("http://localhost:8282/contacts").request().get();
 		assertEquals(response.getStatus(), responseComprobacion.getStatus());
 		// Variable para obtener el numero de personas en la lista
